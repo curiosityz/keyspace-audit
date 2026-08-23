@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use this toolkit, please cite it as below."
+title: "keyspace-audit: measuring realized entropy and detecting keyspace collapse"
+version: 0.1.0
+date-released: 2026-08-23
+license: MIT
+type: software
+abstract: >-
+  A dependency-light toolkit for measuring the realized (as opposed to nominal)
+  keyspace of a seed generator, detecting keyspace collapse, and demonstrating
+  that XOR whitening against a fixed keystream adds zero entropy. Includes a
+  reference Yasmarang PRNG, a vectorised twin with a bit-exact self-test, a
+  black-box realized-keyspace auditor, and a generic OpenCL keystream kernel with
+  a GPU/CPU bit-exactness self-test. Deliberately excludes device seeding models,
+  key derivation, and target matching.
+keywords:
+  - pseudo-random number generator
+  - entropy estimation
+  - keyspace collapse
+  - hardware wallet security
+  - reproducible security research

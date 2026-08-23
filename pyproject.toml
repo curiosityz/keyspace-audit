@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "keyspace-audit"
+version = "0.1.0"
+description = "Measure the realized entropy of a seed generator and detect keyspace collapse."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "keyspace-audit contributors" }]
+keywords = ["prng", "entropy", "keyspace", "yasmarang", "security", "audit"]
+dependencies = ["numpy>=1.21"]
+
+[project.optional-dependencies]
+gpu = ["pyopencl>=2022.1"]
+dev = ["pytest>=7"]
+
+[project.scripts]
+keyspace-audit = "keyspace_audit.cli:main"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
